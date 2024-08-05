@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  pocketbase:
+    container_name: pocketbase
+    restart: unless-stopped
+    user: 0:0
+    image: elestio/pocketbase:latest
+    ports:
+        - 8090:8090
+    volumes:
+        - ./data:/data/pocketbase
