@@ -10,5 +10,5 @@ services:
       - EDGE_PORT=4566
       - SERVICES=sqs,s3,dynamodb,lambda
     volumes:
-      - "${TMPDIR:-/tmp}:/var/lib/localstack"
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
