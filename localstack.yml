@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  localstack:
+    container_name: "localstack"
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+    environment:
+      - DEBUG=${DEBUG:-0}
+      - EDGE_PORT=4566
+      - SERVICES=sqs,s3,dynamodb,lambda
+    volumes:
+      - "${TMPDIR:-/tmp}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
