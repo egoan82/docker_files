@@ -8,7 +8,8 @@ services:
     environment:
       - DEBUG=${DEBUG:-0}
       - EDGE_PORT=4566
-      - SERVICES=sqs,s3,dynamodb,lambda
+      - SERVICES=sqs,dynamodb
+      - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN}
     volumes:
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
