@@ -12,7 +12,7 @@ services:
 
   kafka:
     image: obsidiandynamics/kafka
-    container_name: kakfa_server
+    container_name: kafka_server
     restart: "no"
     ports:
       - "2181:2181"
