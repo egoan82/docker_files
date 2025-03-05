@@ -1,6 +1,7 @@
 services:
   typesense:
     image: typesense/typesense:28.0
+    container_name: typesense_server
     restart: on-failure
     ports:
       - "8108:8108"

@@ -2,7 +2,7 @@ version: "3.8"
 services:
   kafka-ui:
     image: provectuslabs/kafka-ui
-    container_name: kafka-ui
+    container_name: kafka_ui
     ports:
       - "9090:8080"
     restart: "no"
@@ -12,6 +12,7 @@ services:
 
   kafka:
     image: obsidiandynamics/kafka
+    container_name: kakfa_server
     restart: "no"
     ports:
       - "2181:2181"
