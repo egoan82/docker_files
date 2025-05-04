@@ -8,7 +8,7 @@ services:
     environment:
       - DEBUG=${DEBUG:-0}
       - EDGE_PORT=4566
-      - SERVICES=sqs,dynamodb
+      - SERVICES=sqs,dynamodb,apigateway,lambda
       - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN}
     volumes:
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
